@@ -17,6 +17,12 @@ class App extends Component {
     this.getUsers();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.userSelected !== this.state.userSelected) {
+      this.setState({ photos: null });
+    }
+  }
+
   getUsers = async () => {
     let response = await fetch("https://jsonplaceholder.typicode.com/users");
 
@@ -82,7 +88,14 @@ class App extends Component {
           </Col>
 
           <Col>
-            {this.state.albums && <Dropdown photos={this.state.photos} getPhotos={this.getPhotos} userName={this.state.userSelected} albums={this.state.albums} />}
+            {this.state.albums && (
+              <Dropdown
+                photos={this.state.photos}
+                getPhotos={this.getPhotos}
+                userName={this.state.userSelected}
+                albums={this.state.albums}
+              />
+            )}
           </Col>
         </Row>
       </Container>

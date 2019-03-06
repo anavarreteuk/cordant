@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Photos from "./Photos";
+import "./App.css";
 
 export default class Dropdown extends Component {
   state = {
@@ -19,21 +20,20 @@ export default class Dropdown extends Component {
 
   render() {
     return (
-      <div>
-        <h2>{this.props.userName}</h2>
-        <select onChange={event => this.handleChange(event)}>
-          <option default>Albums</option>
-          {this.props.albums.map(album => (
-            <option data-id={album.id} value={album.title} key={album.id}>
-              {album.title}
-            </option>
-          ))}
-        </select>
+      <div className="albumAndPhotos">
+        <div className="dropdown">
+          <h2>{this.props.userName}</h2>
+          <select onChange={event => this.handleChange(event)}>
+            <option default>Albums</option>
+            {this.props.albums.map(album => (
+              <option data-id={album.id} value={album.title} key={album.id}>
+                {album.title}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        {this.props.photos &&
-          this.props.photos.map(photo => (
-            <Photos key={photo.id} photo={photo} />
-          ))}
+        {this.props.photos && <Photos photos={this.props.photos} />}
       </div>
     );
   }

@@ -1,11 +1,16 @@
-import React from 'react'
-
-const Photos = (props) => {
+import React from "react";
+import { Container, Row } from "react-bootstrap";
+import Photo from "./Photo";
+const Photos = props => {
   return (
-    <li>
-      {props.photo.title}---{props.photo.url}
-    </li>
-  )
-}
+    <div className="photosWrapper">
+      <Row>
+        {props.photos.map(photo => (
+          <Photo key={photo.id} photoItem={photo} />
+        ))}
+      </Row>
+    </div>
+  );
+};
 
-export default Photos
+export default Photos;

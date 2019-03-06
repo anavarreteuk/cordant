@@ -14,3 +14,25 @@
 .col-sm-3{
   margin-top: 25px;
 }
+
+.dropdown {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dropdown h2 {
+  margin-bottom: 10px;
+}
+
+.photosWrapper {
+    height: 400px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover{
+  background-color: lightblue;
+}
