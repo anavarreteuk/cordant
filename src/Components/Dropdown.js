@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Photos from "./Photos";
-import "./App.css";
+import "../App.css";
 
 export default class Dropdown extends Component {
   state = {

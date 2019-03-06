@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Menu from "./Menu";
-import Main from "./Main";
-import Dropdown from "./Dropdown";
-import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Menu from "./Menu";
+import Dropdown from "./Dropdown";
+import "../App.css";
 
 class App extends Component {
   state = {
