@@ -1,6 +1,6 @@
 
 Challenge Instructions
-Based on this Prototype, and the code provided (if desired), produce a basic photo album site.
+Produce a basic photo album site.
 
 Home Page : List of users
 
